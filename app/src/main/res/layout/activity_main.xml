@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:orientation="vertical">
+
+    <TextView
+    android:id="@+id/title"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:text="@string/please_choose_your_option_all_the_best"
+    android:textAlignment="center"
+    android:textColor="#ffffff"
+    android:textSize="18sp"
+    android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="15dp"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/btn_rock"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#C8C8C8"
+            android:hint="Choose Rock"/>
+
+        <Button
+            android:id="@+id/btn_paper"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#C8C8C8"
+            android:hint="Choose Paper"/>
+
+        <Button
+            android:id="@+id/btn_scissors"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:background="#C8C8C8"
+            android:hint="Choose Scissors"/>
+    </LinearLayout>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#EAEAEA"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:weightSum="2" >
+
+        <ImageView
+            android:id="@+id/iv_input"
+            android:layout_width="171dp"
+            android:layout_height="163dp"
+            android:layout_margin="20dp"
+            android:layout_marginBottom="28dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            android:tag="input"
+            app:layout_constraintBottom_toTopOf="@id/listViewScore"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/iv_output" />
+
+        <ImageView
+            android:id="@+id/iv_output"
+            android:layout_width="191dp"
+            android:layout_height="172dp"
+            android:layout_margin="20dp"
+            android:layout_weight="1"
+            android:background="#ffffff"
+            app:layout_constraintBottom_toTopOf="@id/listViewScore"
+            app:layout_constraintLeft_toRightOf="@id/iv_input"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <!--<EditText-->
+            <!--android:id="@+id/scoreview"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--app:layout_constraintLeft_toLeftOf="parent"-->
+            <!--app:layout_constraintRight_toRightOf="parent"-->
+            <!--app:layout_constraintTop_toBottomOf="@id/iv_input"/>-->
+
+        <ListView
+            android:id="@+id/listViewScore"
+            android:layout_width="411dp"
+            android:layout_height="438dp"
+            android:layout_marginStart="8dp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/iv_input" />
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</LinearLayout>
